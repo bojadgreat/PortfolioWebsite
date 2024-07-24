@@ -76,13 +76,17 @@ li.nav-item-contactme:hover{
 }
 
 .landpic img{
-  border-radius: 25px;
-  padding: 30px 50px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  size: 50%;
 }
 
 .abMe p{
   color: #c5c6c7;
-  font-size: 100%;
+  font-size: 180%;
 }
 
 .abMe h3{
@@ -109,11 +113,14 @@ li.nav-item-contactme:hover{
 footer{
   width: 100%;
   background-color: #1a1a1d;
-  padding: 1% 1% 1% 1%;
+  padding-top: 10%;
+  padding-bottom: 1%;
 }
 
 footer h2{
-  color: #bdbdbd;
+  color: #e0e0e0;
+  font-size: 250%;
+  letter-spacing: 50%;
 }
 
 .fa{
