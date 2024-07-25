@@ -48,11 +48,20 @@ async function fetchGitHubRepos() {
   const reposContainer = document.getElementById('github-repos');
   
   repos.forEach(repo => {
+
+    
+    if (repo.name === 'bojadgreat.github.io') {
+      return; 
+    }
+
     const repoCard = document.createElement('div');
     repoCard.classList.add('repo-card');
     
     const repoName = document.createElement('h3');
     repoName.textContent = repo.name;
+
+    const repoDescription = document.createElement('p');
+    repoDescription.textContent = repo.description || 'No description available';
     
     const repoLink = document.createElement('a');
     repoLink.href = repo.html_url;
@@ -60,6 +69,7 @@ async function fetchGitHubRepos() {
     repoLink.textContent = 'View Repository';
     
     repoCard.appendChild(repoName);
+    repoCard.appendChild(repoDescription);
     repoCard.appendChild(repoLink);
     
     reposContainer.appendChild(repoCard);
