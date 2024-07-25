@@ -196,3 +196,29 @@ button:hover {
   visibility: hidden;
 }
 
+.repo-card {
+  background-color: #636363;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  margin: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-sizing: border-box;
+  flex: 1 1 calc(33.333% - 20px); 
+}
+.repo-card h3 {
+  margin: 0 0 5px;
+  color: rgb(31, 34, 34);
+  text-align: center;
+}
+.repo-card a {
+  color: #c4c4c4;
+  text-decoration: none;
+  display: block;
+text-align: center; 
+}
+.repo-card a:hover {
+  text-decoration: underline;
+}
