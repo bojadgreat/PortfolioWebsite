@@ -110,4 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(type, delayBetweenTexts);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll('.row, .padding, .landing-text,#abMe, .container');
+  elements.forEach(element => {
+      element.classList.add('fall-in');
+  });
+});
 fetchGitHubRepos();
