@@ -22,7 +22,6 @@ body::-webkit-scrollbar {
    z-index: 9999; 
    width: 100%; 
    background-color: #1a1a1d;
-   height: 10%;
 }
 .navbar-brand{
   font-family: 'Alumni Sans Pinstripe', sans-serif;
@@ -262,10 +261,6 @@ button:hover {
 
 button:hover {
   background-color: #5a5a5a;
-}
-
-.weather.load{
-  visibility: hidden;
 }
 
 .nav-item-contactme .dropdown-menu {
