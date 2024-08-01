@@ -8,6 +8,7 @@ html,body{
 }
 
 body {
+  
   overflow-y: scroll;
 }
 
@@ -25,8 +26,9 @@ body::-webkit-scrollbar {
 }
 .navbar-brand{
   font-family: 'Alumni Sans Pinstripe', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   color: #d5d5d5;
+  font-weight: bolder;
 } 
 
 .container-fluid {
@@ -91,14 +93,14 @@ li.nav-item-contactme:hover{
 
 
 .padding{
-  padding: 100px 0px;
+  padding-top: 200%;
+  padding-bottom: 6.8%;
   background-color: #1a1a1d;
-  
 }
 
-#portf{
-  padding: 50px 500px;
-  padding-bottom: 50px;
+#portfh2{
+  margin-bottom: -2%;
+  font-weight: bolder;
 }
 
 #abMe{
@@ -106,18 +108,10 @@ li.nav-item-contactme:hover{
   background-color: #1a1a1d;
 }
 
-.landpic img{
-  border-radius: 10px;
-  padding-top: 5px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  size: 50%;
-}
-
 #abMe p{
+  padding-top: 5%;
   color: #c5c6c7;
-  font-size: 180%;
+  font-size: 130%;
   text-align: justify;
 }
 
@@ -357,10 +351,11 @@ button:hover {
   margin-bottom: 20px; /* Space below the title */
   font-size: 2.5rem; /* Adjust font size as needed */
   color: #dbd142; /* Optional: change color */
+  
 }
 
 @keyframes fall-in {
-  0% {
+  0% {  
       transform: translateY(-50px);
       opacity: 0;
   }
@@ -373,3 +368,52 @@ button:hover {
 .fall-in {
   animation: fall-in 1s ease forwards; 
 } 
+
+#abMe {
+  padding-top: 150px; /* Ensures header is not covered by navbar */
+  background: url(pexels-neo-2653362.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  display: table;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.abMe {
+  background-color: rgba(26, 26, 29, 0.8); /* Semi-transparent background */
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.abMe img {
+  width: 100%; /* Adjust to fit the container */
+  max-width: 500px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners */
+}
+
+#abBox{
+  min-height: 100%;
+}
+
+.landpic img {
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #portf {
+    padding: 10px 5px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .rounded-box {
+    padding: 10px;
+  }
+}
