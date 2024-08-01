@@ -22,6 +22,7 @@ body::-webkit-scrollbar {
    z-index: 9999; 
    width: 100%; 
    background-color: #1a1a1d;
+   height: 10%;
 }
 .navbar-brand{
   font-family: 'Alumni Sans Pinstripe', sans-serif;
@@ -127,12 +128,6 @@ li.nav-item-contactme:hover{
   text-transform: uppercase;
 }
 
-.portf h2{
-  color: #c5c6c7;
-  text-transform: uppercase;
-  padding: 50px;
-}
-
 #fixed{
   background: url(pexels-neo-2653362.jpg) no-repeat center center fixed;
   display: table;
@@ -142,17 +137,71 @@ li.nav-item-contactme:hover{
   background-size: cover;
 }
 
-footer{
-  width: 100%;
-  background-color: #1a1a1d;
-  padding-top: 10%;
-  padding-bottom: 1%;
+#home h2 {
+  color: #dbd142;
+  margin-bottom: 1.5  rem; /* Increased margin for spacing */
+  text-transform: uppercase;
+  animation: fade-in 1s ease-out forwards; /* Added fade-in animation */
 }
 
-footer h2{
-  color: #e0e0e0;
-  font-size: 250%;
-  letter-spacing: 50%;
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px); /* Start animation from above */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End animation at normal position */
+  }
+}
+
+.repo-card {
+  background-color: #636363;
+  color: #ffffff; /* Changed text color */
+  padding: 1.5rem; /* Increased padding */
+  margin: 1rem; /* Increased margin */
+  border-radius: 10px; /* Increased border radius */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added box shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth hover effects */
+  max-width: 400px; /* Set maximum width */
+}
+
+.repo-card:hover {
+  transform: translateY(-10px); /* Move card up on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Increase shadow on hover */
+}
+
+.repo-card h3 {
+  color: #dbd142; /* Changed heading color */
+  margin-bottom: 1rem; /* Increased margin for spacing */
+}
+
+.repo-card p {
+  color: #ffffff; /* Changed text color */
+}
+
+.repo-card a {
+  background-color: #dbd142; /* Changed link background color */
+  color: #1a1a1d; /* Changed link text color */
+  padding: 0.5rem 1rem; /* Increased padding */
+  border-radius: 5px; /* Added border radius */
+  text-decoration: none; /* Removed underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for smooth color change */
+}
+
+.repo-card a:hover {
+  background-color: #1a1a1d; /* Changed hover background color */
+  color: #dbd142; /* Changed hover text color */
+}
+
+@media (max-width: 768px) {
+  .repo-card {
+      flex: 1 1 calc(100% - 20px); /* Adjusted flex properties for responsiveness */
+  }
+}
+
+.portfmaindiv{
+  padding-top: 10%;
 }
 
 .fa{
@@ -211,87 +260,12 @@ button:hover {
   border: 30px;
 }
 
-input.search-bar {
-  border: none;
-  outline: none;
-  padding: 0.5em 1em;
-  border-radius: 18px;
-  width: calc(100% - 80px);
-  margin: 10px;
-}
-
 button:hover {
   background-color: #5a5a5a;
 }
 
 .weather.load{
   visibility: hidden;
-}
-
-.repo-card {
-  background-color: #636363;
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
-  margin: 20px;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  box-sizing: border-box;
-  flex: 1 1 calc(33.333% - 20px); 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 400px;
-  position: relative; 
-}
-.repo-card h3 {
-  color: rgb(31, 34, 34);
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-weight: bolder;
-}
-.repo-card p {
-  color: rgb(103, 191, 194);
-  text-align: justify;
-  font-size: 15px;
-  padding-bottom: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.repo-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px 0;
-  color: #333;
-  background-color: #fff;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  position: absolute; /* Position the link at the bottom */
-  bottom: 10px; /* Adjust this value as needed */
-}
-.repo-card:hover{
-  background-color:rgb(255, 255, 255);
-  cursor: default;
-  transition: ease-in-out 0.3s;
-}
-.repo-card:hover h3{
-  color: #333; 
-}
-.repo-card:hover p{
-  color: #b30e0e; 
-}
-.repo-card:hover a{
-  background-color: #333;
-  color: #fff; 
-}
-.repo-card a:hover {
-  background-color: #c04141;
-  color: #fff; 
 }
 
 .nav-item-contactme .dropdown-menu {
