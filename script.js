@@ -76,4 +76,38 @@ async function fetchGitHubRepos() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const texts = ["Programmer", "Developer", "Software Engineer"];
+  let currentIndex = 0;
+  let charIndex = 0;
+  const typingSpeed = 100; // typing speed in milliseconds
+  const erasingSpeed = 50; // erasing speed in milliseconds
+  const delayBetweenTexts = 1000; // delay between texts in milliseconds
+
+  const typingTextElement = document.getElementById("typing-text");
+
+  function type() {
+    if (charIndex < texts[currentIndex].length) {
+      typingTextElement.textContent += texts[currentIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(erase, delayBetweenTexts);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typingTextElement.textContent = texts[currentIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingSpeed);
+    } else {
+      currentIndex = (currentIndex + 1) % texts.length;
+      setTimeout(type, typingSpeed);
+    }
+  }
+
+  setTimeout(type, delayBetweenTexts);
+});
+
 fetchGitHubRepos();
